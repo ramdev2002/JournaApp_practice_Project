@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface JournalService {
-  void  save(JournalEntity journalEntity,ObjectId id);
+  JournalEntity  save(JournalEntity journalEntity,ObjectId id);
   List<JournalEntity> getAll();
   Optional<JournalEntity> getById(ObjectId id);
  void deleteById(ObjectId id);

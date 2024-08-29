@@ -22,8 +22,8 @@ import java.util.Optional;
 public class JournalController {
   private final JournalService journalService;
 
-  @PostMapping
-  public void saveJournal(@RequestBody JournalEntity journalEntity, ObjectId id){
+  @PostMapping("/{id}")
+  public void saveJournal(@RequestBody JournalEntity journalEntity,@PathVariable ObjectId id){
     journalService.save(journalEntity,id);
   }
   @GetMapping
